@@ -1,0 +1,39 @@
+name: diff-env
+channels:
+  - pytorch
+dependencies:
+  # System related
+  - python=3.10
+  - pip
+  - pip:
+    - build
+    - pyyaml
+    - types-pyyaml
+    - ipywidgets
+    - gcsfs
+    # Scipy stack
+    - numpy
+    - matplotlib
+    - scikit-learn
+    - pandas
+    - pyarrow
+    # Deep learning
+    - pytorch
+    - torchvision
+    - einops
+    - accelerate
+    - tensorboard
+    # GCP
+    - google-cloud-aiplatform
+    - kfp
+    # Others
+    - tqdm
+    # Testing
+    - pytest
+    - pytest-cov
+    - pytest-mock
+    # Formating, linting
+    - mypy
+    - pylint
+    - black
+    - isort
