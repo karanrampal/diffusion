@@ -16,7 +16,9 @@ dependencies:
     - matplotlib
     - scikit-learn
     - pandas
+    - pandas-stubs
     - pyarrow
+    - types-Pillow
     # Deep learning
     - pytorch
     - torchvision
@@ -28,6 +30,7 @@ dependencies:
     - kfp
     # Others
     - tqdm
+    - types-tqdm
     # Testing
     - pytest
     - pytest-cov
