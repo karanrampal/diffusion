@@ -9,7 +9,9 @@ numpy
 matplotlib
 scikit-learn
 pandas
+pandas-stubs
 pyarrow
+types-Pillow
 # Deep learning
 torch
 torchvision
@@ -21,6 +23,7 @@ google-cloud-aiplatform
 kfp
 # Others
 tqdm
+types-tqdm
 # Testing
 pytest
 pytest-cov
