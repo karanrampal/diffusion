@@ -33,8 +33,8 @@ class Params:
         """Get attribute"""
         try:
             return self.__dict__[attr]
-        except KeyError:
-            raise AttributeError
+        except KeyError as exc:
+            raise AttributeError from exc
 
     def __setattr__(self, key: str, value: Any) -> None:
         """Set attribute"""
