@@ -14,7 +14,7 @@ pyarrow
 torch
 torchvision
 einops
-acclerate
+accelerate
 tensorboard
 # GCP
 google-cloud-aiplatform
