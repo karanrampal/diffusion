@@ -1,3 +1,5 @@
+![Diffusion](https://github.com/karanrampal/diffusion/actions/workflows/main.yml/badge.svg)
+
 # Diffusion
 DDPM diffusion from scratch using Accelerator from HuggingFace to train models on multiple GPU's, nodes, precisions, FSDP support etc.
 
