@@ -1,0 +1,65 @@
+[project]
+name = "diffusion"
+version = "0.0.1"
+authors = [
+  { name="Karan Rampal", email="karanrampal87@gmail.com" },
+]
+description = "A project for training a diffusion model"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyyaml",
+    "gcsfs",
+    "matplotlib",
+    "numpy",
+    "scikit-learn",
+    "pandas",
+    "torch",
+    "torchvision",
+    "einops",
+    "tensorboard",
+    "accelerate",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/diffusion"
+"Bug Tracker" = "https://github.com/diffusion/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.mypy]
+show_error_codes = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = ["torchvision.*", "datasets", "accelerate"]
+ignore_missing_imports = true
+
+[tool.pylint."MASTER"]
+ignore = [".ipynb_checkpoints"]
+
+[tool.pylint."TYPECHECK"]
+generated-members = ["torch"]
+
+[tool.pylint."DESIGN"]
+max-args = 8
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
